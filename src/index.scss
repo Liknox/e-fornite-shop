@@ -1,3 +1,6 @@
+* {
+	-webkit-tap-highlight-color: transparent;
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -51,7 +54,7 @@ nav {
 
 #toast-container {
 	top: 2.25rem !important;
-   animation: fade-in .25s ease-in-out;
+	animation: fade-in 0.25s ease-in-out;
 }
 
 .toast-item {
@@ -98,7 +101,6 @@ nav {
 
 		animation: blur 0.8s;
 		animation-fill-mode: forwards;
-
 	}
 
 	&-buy-now {
@@ -185,20 +187,25 @@ nav {
 }
 
 @keyframes fade-in {
-   from {
-      opacity: 0;
-      transform: translateY(-1rem)
-   }
-   to {
-      opacity: 1;
-      transform: translateY(0)
-   }
+	from {
+		opacity: 0;
+		transform: translateY(-1rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @media (max-width: 600px) {
 	#toast-container {
 		min-width: 0;
 		bottom: 0%;
+	}
+}
+@media (max-width: 520px) {
+	.part-item__description {
+		width: 70%;
 	}
 }
 
