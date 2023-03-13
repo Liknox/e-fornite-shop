@@ -41,6 +41,8 @@ const Shop = () => {
 
 	function handleBasketShow() {
 		setIsBasketShow(e => !e)
+		const body = document.querySelector("body")
+		body.style.overflow = isBasketShow ? "visible" : "hidden"
 	}
 
 	function handleQuantity(id, action) {
