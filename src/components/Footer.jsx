@@ -4,7 +4,7 @@ const Footer = () => {
 			<div className="footer-copyright">
 				<div className="container">
 					ⓒ {new Date().getFullYear()} Copyright Text
-					<a href="#!" className="grey-text text-lighten-4 right">
+					<a href="https://github.com/Liknox/e-commerce-simple" target="_blank" rel="noreferrer" className="grey-text text-lighten-4 right">
 						Repo
 					</a>
 				</div>
