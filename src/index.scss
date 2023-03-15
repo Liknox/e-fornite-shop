@@ -47,7 +47,7 @@ nav {
 	border-radius: 8px;
 
 	cursor: pointer;
-	z-index: 5;
+	z-index: 305;
 	padding: 1rem;
 	user-select: none;
 }
@@ -55,6 +55,7 @@ nav {
 #toast-container {
 	top: 2.25rem !important;
 	animation: fade-in 0.25s ease-in-out;
+   z-index: 50;
 }
 
 .toast-item {
