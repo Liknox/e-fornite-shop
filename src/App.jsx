@@ -2,11 +2,15 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Shop from "./components/Shop"
 
+import { ContextProvider } from "./context"
+
 function App() {
 	return (
 		<>
 			<Header />
-			<Shop />
+			<ContextProvider>
+				<Shop />
+			</ContextProvider>
 			<Footer />
 		</>
 	)

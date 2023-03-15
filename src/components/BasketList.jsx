@@ -1,8 +1,9 @@
-import { useEffect } from "react"
+import { useContext } from "react"
+import { ShopContext } from "../context"
 import BasketItem from "./BasketItem"
 
 const BasketList = props => {
-	const { order = [], handleBasketShow, handleQuantity, removeItem } = props
+	const { order = [], handleBasketShow } = useContext(ShopContext)
 
 	const totalPrice = order.reduce((acc, el) => (acc += el.price * el.quantity), 0)
 
@@ -14,7 +15,7 @@ const BasketList = props => {
 					Basket
 				</li>
 				{order.length ? (
-					order.map(e => <BasketItem key={e.id} {...e} removeItem={removeItem} handleQuantity={handleQuantity} />)
+					order.map(e => <BasketItem key={e.id} {...e} />)
 				) : (
 					<li href="#!" className="collection-item">
 						Basket is empty
@@ -23,7 +24,7 @@ const BasketList = props => {
 				<li href="#!" className="collection-item active">
 					<div className="basket-buy-now">
 						Total price: {totalPrice}$
-						<button className={`btn blue darken-4 ${order.length ? "" : "disabled"}`} onClick={() => alert("There's no beckend actions for this!")}>
+						<button className={`btn blue darken-4 ${order.length ? "" : "disabled"}`} onClick={() => alert("There's no backend actions for this!")}>
 							buy now
 						</button>
 					</div>
