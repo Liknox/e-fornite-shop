@@ -55,7 +55,7 @@ nav {
 #toast-container {
 	top: 2.25rem !important;
 	animation: fade-in 0.25s ease-in-out;
-   z-index: 50;
+	z-index: 50;
 }
 
 .toast-item {
@@ -208,16 +208,16 @@ nav {
 	.part-item__description {
 		width: 70%;
 	}
-   .part-item__qty {
-      width: 50%;
-      padding: 5px;
-      span {
-         padding: 5px;
-      }
-   }
-   .basket-count {
-      font-size: 24px;
-   }
+	.part-item__qty {
+		width: 50%;
+		padding: 5px;
+		span {
+			padding: 5px;
+		}
+	}
+	.basket-count {
+		font-size: 24px;
+	}
 }
 
 @media (max-width: 1465px) {

@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { ShopContext } from "../context"
 import BasketItem from "./BasketItem"
 
-const BasketList = props => {
+const BasketList = () => {
 	const { order = [], handleBasketShow } = useContext(ShopContext)
 
 	const totalPrice = order.reduce((acc, el) => (acc += el.price * el.quantity), 0)

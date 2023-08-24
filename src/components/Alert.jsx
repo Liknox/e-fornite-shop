@@ -1,7 +1,7 @@
 import { useEffect, useContext } from "react"
 import { ShopContext } from "../context"
 
-function Alert(props) {
+function Alert() {
 	const { alertName: name, closeAlert } = useContext(ShopContext)
 
 	useEffect(() => {

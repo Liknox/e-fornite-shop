@@ -4,7 +4,7 @@ export function reducer(state, { type, payload }) {
 			return {
 				...state,
 				goods: payload || [],
-				loading: false
+				loading: false,
 			}
 		//
 		case "ADD_ITEM": {
@@ -13,7 +13,7 @@ export function reducer(state, { type, payload }) {
 			if (itemIndex < 0) {
 				const newItem = {
 					...payload,
-					quantity: 1
+					quantity: 1,
 				}
 				newOrder = [...state.order, newItem]
 			} else {
@@ -30,7 +30,7 @@ export function reducer(state, { type, payload }) {
 		case "HANDLE_BASKET_SHOW":
 			return {
 				...state,
-				isBasketShow: !state.isBasketShow
+				isBasketShow: !state.isBasketShow,
 			}
 		case "HANDLE_QUANTITY": {
 			if (payload.action === "add") {
@@ -45,12 +45,12 @@ export function reducer(state, { type, payload }) {
 		case "REMOVE_ITEM":
 			return {
 				...state,
-				order: state.order.filter(e => e.id !== payload.e)
+				order: state.order.filter(e => e.id !== payload.e),
 			}
 		case "CLOSE_ALERT":
 			return {
 				...state,
-				alertName: ""
+				alertName: "",
 			}
 
 		default:

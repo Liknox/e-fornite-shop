@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { ShopContext } from "../context"
 
-const Cart = props => {
+const Cart = () => {
 	const { order, handleBasketShow, closeAlert } = useContext(ShopContext)
 	const quantity = order.length
 	return (
@@ -9,7 +9,7 @@ const Cart = props => {
 			className="cart blue darken-4 white-text"
 			onClick={() => {
 				handleBasketShow()
-            closeAlert()
+				closeAlert()
 			}}
 		>
 			<i className="material-icons">shopping_cart</i>

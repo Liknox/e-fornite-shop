@@ -8,7 +8,7 @@ const initialState = {
 	loading: true,
 	order: [],
 	isBasketShow: false,
-	alertName: ""
+	alertName: "",
 }
 
 export const ContextProvider = ({ children }) => {
@@ -31,9 +31,9 @@ export const ContextProvider = ({ children }) => {
 	value.closeAlert = () => {
 		dispatch({ type: "CLOSE_ALERT" })
 	}
-   value.setGoods = (data) => {
-      dispatch({type: "SET_GOODS", payload: data})
-   }
+	value.setGoods = data => {
+		dispatch({ type: "SET_GOODS", payload: data })
+	}
 
 	return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>
 }
